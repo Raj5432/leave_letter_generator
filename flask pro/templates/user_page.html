@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Letter</title>
+</head>
+<body> 
+    <h1>Leave Letter</h1>
+    <p>I am {{ name }},</p>
+    <p>
+        I am from {{branch}} writing to request a leave of absence on {{ date }} due to {{ reason }}. please grant me permission for one day, and I will make sure to complete any pending work before I leave.
+    </p>
+    <p>
+        Thanking  you.
+    </p>
+    <p>yours obediently,</p>
+    <p>{{ name }}</p>
+    
+    <form method="POST" action="/admin">
+        <input type="hidden" name="name" value="{{ name }}">
+        <input type="hidden" name="branch" value="{{ branch }}">
+        <input type="hidden" name="date" value="{{ date }}">
+        <input type="hidden" name="place" value="{{ place }}">
+        <input type="hidden" name="reason" value="{{ reason }}">
+        <input type="hidden" name="address" value="{{ address }}">
+        <input type="submit" value="Send for Approval">
+    </form>    
+</body>  
+</html>
